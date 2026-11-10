@@ -7,6 +7,10 @@ import Welcome from "./pages/Welcome";
 import SimplePage from "./pages/SimplePage";
 import Maintenance from "./pages/Maintenance";
 import Cars from "./pages/Cars";
+import UserListPage from "./pages/UserListPage";
+import UserDetailsPage from "./pages/UserDetailsPage";
+import OrderManagementPage from "./pages/OrderManagementPage";
+import InvoicePage from "./pages/InvoicePage";
 
 export default function App() {
   return (
@@ -24,6 +28,10 @@ export default function App() {
         <Route path="/my-rentals" element={<SimplePage title="My rentals" />} />
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/profile" element={<SimplePage title="My profile" />} />
+        <Route path="/users" element={<UserListPage />} />
+        <Route path="/users/:id" element={<UserDetailsPage />} />
+        <Route path="/orders" element={<OrderManagementPage />} />
+        <Route path="/orders/:id/invoice" element={<InvoicePage />} />
       </Route>
     </Routes>
   );

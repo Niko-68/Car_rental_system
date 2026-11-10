@@ -26,6 +26,8 @@ export default function UserLayout() {
               { label: "Cars", to: "/cars" },
               { label: "My rentals", to: "/my-rentals" },
               { label: "Maintenance", to: "/maintenance" },
+              { label: "Users", to: "/users" },
+              { label: "Orders", to: "/orders" },
             ]}
           />
         </div>
