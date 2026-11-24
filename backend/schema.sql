@@ -207,7 +207,7 @@ CREATE TABLE maintenances (
 CREATE TABLE notifications (
   id              INT UNSIGNED NOT NULL AUTO_INCREMENT,
   employee_id     INT UNSIGNED NOT NULL,
-  maintenance_id  INT UNSIGNED NULL,
+  maintenance_id  INT UNSIGNED NOT NULL,
   subject         VARCHAR(200) NOT NULL,
   message         TEXT NULL,
   date            DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -217,5 +217,5 @@ CREATE TABLE notifications (
   CONSTRAINT fk_notifications_employee FOREIGN KEY (employee_id)
     REFERENCES employees (user_id) ON DELETE CASCADE,
   CONSTRAINT fk_notifications_maintenance FOREIGN KEY (maintenance_id)
-    REFERENCES maintenances (id) ON DELETE SET NULL
+    REFERENCES maintenances (id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
